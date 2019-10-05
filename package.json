@@ -1,0 +1,23 @@
+{
+  "name": "localhost-login",
+  "version": "1.0.0",
+  "description": "An easy to use [offline] attendance form. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunteracm/localhost-login.git"
+  },
+  "keywords": [
+    "HunterACM",
+    "localhost-login"
+  ],
+  "author": "HunterACM",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hunteracm/localhost-login/issues"
+  },
+  "homepage": "https://github.com/hunteracm/old-localhost-login/blob/master/README.org"
+}
