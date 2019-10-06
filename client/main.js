@@ -1,22 +1,37 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Meteor } from 'meteor/meteor';
 
-import './main.html';
+import { useTheme, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
+import Navbar from '../imports/ui/Navbar.js';
+import Footer from '../imports/ui/Footer.js';
+import App from '../imports/ui/App.js';
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark', // Switching the dark mode on is a single property value change.
   },
 });
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+Meteor.startup(() => {
+  ReactDOM.render(
+    <Navbar />,
+    document.getElementById('navbar')
+  );
+
+  ReactDOM.render(
+    <Footer />,
+    document.getElementById('footer')
+  );
+
+  ReactDOM.render(
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> {/* initialize css */}
+        <App />
+    </ThemeProvider>,
+    document.getElementById('app')
+  );
 });
