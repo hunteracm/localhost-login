@@ -1,23 +1,23 @@
 {
   "name": "localhost-login",
-  "version": "1.0.0",
-  "description": "An easy to use [offline] attendance form. ",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hunteracm/localhost-login.git"
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "meteor-node-stubs": "^0.4.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
-  "keywords": [
-    "HunterACM",
-    "localhost-login"
-  ],
-  "author": "HunterACM",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/hunteracm/localhost-login/issues"
-  },
-  "homepage": "https://github.com/hunteracm/old-localhost-login/blob/master/README.org"
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
 }
