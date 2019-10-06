@@ -9,6 +9,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Navbar from '../imports/ui/Navbar.js';
 import Footer from '../imports/ui/Footer.js';
 import App from '../imports/ui/App.js';
+import './main.css';
 
 const theme = createMuiTheme({
   palette: {

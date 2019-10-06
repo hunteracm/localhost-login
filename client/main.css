@@ -2,3 +2,25 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+footer {
+  margin-top:calc(5% + 60px);
+  bottom: 0;
+}
+
+.social [class*="fa-"] {
+    background-color: #7e57c2;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 3px;
+    width: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.fa:hover{
+    background-color: #333;
+}
