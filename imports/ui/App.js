@@ -1,9 +1,9 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
-import Grid from "@material-ui/core/Grid";
+
+import Form from './Form.js';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -43,18 +43,8 @@ export default function Body() {
       <br/>
       <br/>
 
-      <Grid container justify="center" spacing={spacing}>
-        <Grid item xs={6}>
-        </Grid>
-
-        <Grid item xs={6}>
-          <div align="center">
-            <Button variant="outlined" style={{color: "#7e57c2",}} className={classes.button} label="Submit" type="submit">
-              Submit
-            </Button>
-          </div>
-        </Grid>
-      </Grid>
+      <Form>
+      </Form>
     </div>
   );
 }
