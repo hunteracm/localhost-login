@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 
+function today(){
+  let newDate = new Date();
+  let day = newDate.getDate();
+  let month = newDate.getMonth() + 1;
+  let year = newDate.getFullYear();
+  return `${year}-${month < 10 ?`0${month}`:`${month}`}-${day < 10 ?`0${day}`:`${day}`}`;
+}
+
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +16,8 @@ export default class Form extends React.Component {
       fname: '',
       lname: '',
       empl: '',
-      email: ''
+      email: '',
+      date: today()
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +30,7 @@ export default class Form extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.fname + ' ' + this.state.lname  + ' ' + this.state.empl  + ' ' + this.state.email);
+    alert('Got: ' + this.state.fname + ' ' + this.state.lname  + ' ' + this.state.empl  + ' ' + this.state.email + ' ' + this.state.date);
     event.preventDefault();
   }
 
