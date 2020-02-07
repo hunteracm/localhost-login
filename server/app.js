@@ -8,9 +8,7 @@ const dotenvExpand = require("dotenv-expand");
 const myEnv = dotenv.config();
 dotenvExpand(myEnv);
 
-const DB_USER = process.env.DB_USER;
-const DB_PASS = process.env.DB_PASS;
-const uri = `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0-eprga.gcp.mongodb.net/test?retryWrites=true&w=majority`;
+const uri = process.env.DB_URI;
 
 const addRouter = require("./routes/add");
 const getRouter = require("./routes/get");
