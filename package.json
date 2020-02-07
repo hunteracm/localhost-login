@@ -1,0 +1,25 @@
+{
+  "name": "localhost-login",
+  "version": "1.0.0",
+  "description": "An easy to use [offline] attendance form.",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunteracm/localhost-login.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hunteracm/localhost-login/issues"
+  },
+  "homepage": "https://github.com/hunteracm/localhost-login#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
