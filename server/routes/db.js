@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-// Subrouters
-const addRouter = require("./add");
-const getRouter = require("./get");
+router.get("/get", (req, res, next) => {
+  res.send("respond with get");
+});
 
-// Mount our subrouters to assemble our database router
-router.use("/add", addRouter);
-router.use("/get", getRouter);
+router.post("/add", (req, res, next) => {
+  res.send("respond with add");
+});
 
 // Error handling middleware
 router.use((req, res, next) => {
