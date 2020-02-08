@@ -7,8 +7,8 @@ const userSchema = new Schema(
     fname: { type: String, trim: true },
     lname: { type: String, trim: true },
     email: { type: String, trim: true },
-    empl: { type: Number, trim: true },
-    date: { type: Array, default: [new Date()] },
+    empl: { type: String, trim: true },
+    dates: [{ type: String }],
   },
   {
     timestamps: true,

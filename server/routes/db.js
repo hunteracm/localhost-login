@@ -2,19 +2,26 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/user.model");
 
+const { today } = require("../utils/misc");
+
 router.get("/get", (req, res, next) => {
   User.find()
     .then(users => res.json(users))
     .catch(err => res.status(400).json("Error: " + err));
 });
 
-router.post("/add", (req, res, next) => {
-  const fname = "Khinshan";
-  const lname = "Khan";
-  const email = "khinshan.khan@hunteracm.org";
-  const empl = 23596244;
-  const now = new Date();
-  const newUser = new User({ fname, lname, email, empl, now });
+router.post("/addNew", (req, res, next) => {
+  console.log(req.body);
+  const fname = req.body.fname;
+  const lname = req.body.lname;
+  const email = req.body.email;
+  const empl = req.body.empl;
+  const dates = [today()];
+
+  console.log("Destructured:");
+  console.log(fname, lname, email, empl, dates);
+
+  const newUser = new User({ fname, lname, email, empl, dates });
 
   newUser
     .save()
