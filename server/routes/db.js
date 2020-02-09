@@ -18,15 +18,42 @@ router.post("/addNew", (req, res, next) => {
   const empl = req.body.empl;
   const dates = [today()];
 
-  console.log("Destructured:");
-  console.log(fname, lname, email, empl, dates);
-
   const newUser = new User({ fname, lname, email, empl, dates });
 
   newUser
     .save()
     .then(() => res.json("User added!"))
     .catch(err => res.status(400).json("Error: " + err));
+});
+
+router.post("/addOld", (req, res, next) => {
+  console.log(req.body);
+  // const fname = req.body.fname;
+  // const lname = req.body.lname;
+  // const email = req.body.email;
+  const empl = req.body.empl;
+  // const dates = [today()];
+
+  // const newUser = new User({ fname, lname, email, empl, dates });
+
+  User.findOne({ empl: empl }, (err, oldUser) => {
+    if (err) {
+      return next(err);
+    }
+
+    if (!oldUser) {
+      return res.send();
+    }
+
+    oldUser.dates.push(today());
+
+    oldUser
+      .save()
+      .then(() => res.json("User added!"))
+      .catch(err => res.status(400).json("Error: " + err));
+
+    return res.send();
+  });
 });
 
 // Error handling middleware
