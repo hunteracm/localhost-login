@@ -31,7 +31,7 @@ function App() {
             </Link>
           </span>
           <span>
-            <Link to="/calendar" className="navElement">
+            <Link to="/about" className="navElement">
               About Us
             </Link>
           </span>
@@ -47,6 +47,12 @@ function App() {
           <div style={{ textAlign: "center" }}>Home</div>
         </Route>
       </Switch>
+      <div className="footer">
+      <div className="links">
+      <Link className="footerLink" to="/">Home</Link>
+      <Link className="footerLink" to="/about">About</Link>
+      </div>
+      </div>
     </Router>
   );
 }
