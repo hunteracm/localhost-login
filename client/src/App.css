@@ -24,3 +24,11 @@
   text-decoration: none;
   color: black;
 }
+
+.footer {
+  background-color: rgb(60, 0, 60);
+  color: rgb(255, 224, 100);
+  padding: 0.2rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
