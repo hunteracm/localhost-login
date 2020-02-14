@@ -11,18 +11,13 @@ function App() {
         <div className="navBar">
           <span>
             {/* <img className="logo" src=""/> */}
-            <Link to="/" className="logo">
+            <Link to="/">
             <img src={logo} alt="Hunter ACM" className="logoImg"/>
             </Link>
           </span>
           <span>
-            <Link to="/" className="navElement">
-              Home
-            </Link>
-          </span>
-          <span>
-            <Link to="/checkIn" className="navElement">
-              Check In
+            <Link to="/about" className="navElement">
+              About Us
             </Link>
           </span>
           <span>
@@ -31,8 +26,13 @@ function App() {
             </Link>
           </span>
           <span>
-            <Link to="/about" className="navElement">
-              About Us
+            <Link to="/checkIn" className="navElement">
+              Check In
+            </Link>
+          </span>
+          <span>
+            <Link to="/" className="navElement">
+              Home
             </Link>
           </span>
         </div>
