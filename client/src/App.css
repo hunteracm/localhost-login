@@ -1,6 +1,7 @@
 .navBar {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-right: 0.4rem;
   height: fit-content;
   /* height: 2rem; */
   font-size: 1.1rem;
@@ -12,6 +13,7 @@
 .navElement {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
+  margin-top: 0.8rem;
   /* color: black; */
   color: white;
   text-decoration: none;
@@ -52,14 +54,6 @@
 .footerLink:visited {
   color: white;
   text-decoration: none;
-}
-
-.logo {
-  /* background-image: url("./ColorACMLogo.svg");
-  background-size: 1.4rem 1.4rem;
-  background-repeat: no-repeat;
-  height: 1.4rem;
-  width: 1.4rem; */
 }
 
 .logoImg {
