@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "./ColorACMLogo.svg";
 import "./App.css";
 import CheckIn from "./components/checkIn";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -12,7 +12,7 @@ function App() {
           <span>
             {/* <img className="logo" src=""/> */}
             <Link to="/" className="logo">
-              Hunter ACM Chapter
+            <img src={logo} alt="Hunter ACM" className="logoImg"/>
             </Link>
           </span>
           <span>
