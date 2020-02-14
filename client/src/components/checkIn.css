@@ -1,0 +1,54 @@
+.content {
+  height: 95vh;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(218, 218, 218);
+}
+
+.checkInWrapper {
+  background-color: rgb(247, 247, 247);
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.name,
+.email,
+.emplid {
+  padding: 0.2rem;
+  border: none;
+  border-bottom: 2px solid grey;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  border-right: white solid 2px;
+  border-right: white solid 2px;
+}
+
+.name {
+  width: 10rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+.email {
+  width: 20rem;
+}
+
+.btn {
+  border-radius: 0.2rem;
+  background-color: rgb(181, 255, 181);
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: none;
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(98, 255, 98);
+  border: none;
+  text-decoration: none;
+}
