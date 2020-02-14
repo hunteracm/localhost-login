@@ -8,12 +8,14 @@
   background-color: white;
   color: black;
   font-weight: 600;
+  height: 4rem;
 }
 
 .calendarMonth {
   background-color: red;
   color: white;
   font-weight: 600;
+  height: 6rem;
 }
 
 .monthWithDescription {
