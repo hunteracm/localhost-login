@@ -26,15 +26,13 @@ export default class CheckIn extends Component {
         0,
       ]
     };
-    this.update = this.update.bind(this);
-    this.submit = this.submit.bind(this);
   }
 
   onComponentDidMount() {
     document.title = "Hunter ACM - Check In";
   }
 
-  update(e) {
+  update = (e) => {
     if (e.target.name == "") {
     } else if (e.target.name == "emplid") {
       let re = /^[0-9]{0,9}$/;
@@ -59,7 +57,7 @@ export default class CheckIn extends Component {
     }
   }
 
-  submit() {
+  submit = () => {
     this.setState({
       loading: true,
     });
