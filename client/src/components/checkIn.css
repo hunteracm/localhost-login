@@ -55,3 +55,17 @@
   border: none;
   text-decoration: none;
 }
+
+.error {
+  background-color: rgb(255, 128, 128);
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
