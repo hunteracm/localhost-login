@@ -102,7 +102,8 @@ export default class CheckIn extends Component {
       <div className="content">
         <div className="checkInWrapper">
           <div>
-            <div className="">Fill out to check in:</div>
+            <div className="title">Check In to our Meeting!</div>
+            <div className="description">Fill out to check in:</div>
             <input
               name="first_name"
               type="text"
