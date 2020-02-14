@@ -1,0 +1,21 @@
+.calendarWrap {
+  background-color: white;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.calendarDate {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+}
+
+.calendarMonth {
+  background-color: red;
+  color: white;
+  font-weight: 600;
+}
+
+.monthWithDescription {
+  background-color: rgb(215, 215, 215);
+}
