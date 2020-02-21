@@ -2,22 +2,65 @@
   background-color: white;
   border: none;
   border-radius: 0.2rem;
+  /* width: 80rem; */
+  width: fit-content;
+  height: 40rem;
+}
+
+.meetingDay {
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  margin: 0.5rem;
+  border: none;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  height: 3.9rem;
+  width: 3.4rem;
 }
 
 .calendarDate {
   background-color: white;
   color: black;
-  font-weight: 600;
-  height: 4rem;
+  font-weight: 800;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 2rem;
+  padding: 0.2rem;
+  padding-top: 0.5rem;
+  width: 3rem;
+  font-size: 1.3rem;
 }
 
 .calendarMonth {
   background-color: red;
   color: white;
-  font-weight: 600;
-  height: 6rem;
+  font-weight: 800;
+  padding: 0.2rem;
+  /* height: 1rem; */
+  width: 3rem;
+  /* border: none; */
+}
+
+.calendarMonthInactive {
+  background-color: grey;
+  color: white;
+  font-weight: 800;
+  padding: 0.2rem;
+  width: 3rem;
 }
 
 .monthWithDescription {
   background-color: rgb(215, 215, 215);
+}
+
+.calendar {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 30rem;
+  margin-left: auto;
 }
