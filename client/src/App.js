@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./ColorACMLogo.svg";
+import logo from "./DarkLightACMLogo.svg";
 import "./App.css";
 import CheckIn from "./components/checkIn";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -47,7 +47,7 @@ function App() {
         </Route>
         <Route path="/">
           {/* Home */}
-          <div style={{ textAlign: "center" }}>Home</div>
+          <div style={{ textAlign: "center" }} className="content">Home</div>
         </Route>
       </Switch>
       <div className="footer">
