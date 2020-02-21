@@ -1,5 +1,6 @@
 .content {
-  height: 95vh;
+  min-height: 95vh;
+  height: fit-content;
   text-align: center;
   display: flex;
   flex-flow: column;
