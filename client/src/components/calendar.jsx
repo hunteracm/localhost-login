@@ -32,8 +32,7 @@ export default class Calendar extends Component {
       <div className="content">
         <div className="calendarWrap">
           <div className="title">{"Spring 2020 Calendar"}</div>
-          {/* {dateArray !== null ? dateArray : "No dates available."} */}
-          <this.DateArray />
+          {datesFile.dates[0] !== undefined ? <this.DateArray /> : "No dates available."}
         </div>
       </div>
     );
