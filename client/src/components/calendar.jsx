@@ -21,39 +21,38 @@ export default class Calendar extends Component {
     const cMonth = new Date().getMonth() + 1;
     const date = p.date.date.split("/");
     const day = date[1];
-    const month =
-      date[0] === "1"
-        ? "Jan"
-        : date[0] === "2"
-        ? "Feb"
-        : date[0] === "3"
-        ? "Mar"
-        : date[0] === "4"
-        ? "Apr"
-        : date[0] === "5"
-        ? "May"
-        : date[0] === "6"
-        ? "Jun"
-        : date[0] === "7"
-        ? "Jul"
-        : date[0] === "8"
-        ? "Aug"
-        : date[0] === "9"
-        ? "Sep"
-        : date[0] === "10"
-        ? "Nov"
-        : date[0] === "11"
-        ? "Oct"
-        : date[0] === "12"
-        ? "Dec"
-        : "Unk";
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    const dayNames = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    // year, month (0-11), date (1-31)
+    let thatDate = new Date(date[2],date[0] - 1,date[1]);
+    const month = monthNames[date[0] - 1].substr(0,3);
+    const dayName = dayNames[thatDate.getDay()].substr(0,3);
     const name = p.date.name;
     const description = p.date.description;
-    // console.log(date[0] + " " + day)
-    // console.log(cMonth + " " + cDay)
-    // console.log(date[0] < cMonth || (date[0] === cMonth && day < cDay))
     return (
       <div className="meetingDay">
+        <div className="calendarDay">{dayName}</div>
         <div className="calendarDate">{day}</div>
         <div
           className={
@@ -85,7 +84,7 @@ export default class Calendar extends Component {
     return (
       <div className="content">
         <div className="calendarWrap">
-          <div className="title">{"This Semester's Calendar"}</div>
+          <div className="title">{"Spring 2020 Calendar"}</div>
           {/* {dateArray !== null ? dateArray : "No dates available."} */}
           <this.DateArray />
         </div>
