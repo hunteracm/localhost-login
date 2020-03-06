@@ -10,15 +10,14 @@ router.get("/get", (req, res, next) => {
     .catch(err => res.status(400).json("Error: " + err));
 });
 
-const findRelevantFields = (stored, current) => {
-  if (req.body[current] !== "") {
-    return { ...stored, [current]: req.body[current] };
-  } else {
-    return stored;
-  }
-};
-
 router.post("/add", (req, res, next) => {
+  const findRelevantFields = (stored, current) => {
+    if (req.body[current] !== "") {
+      return { ...stored, [current]: req.body[current] };
+    } else {
+      return stored;
+    }
+  };
   const check_in_fields = Object.keys(req.body).reduce(findRelevantFields, {});
 
   User.findOne(check_in_fields, (err, oldUser) => {
