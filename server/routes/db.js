@@ -29,7 +29,7 @@ router.post("/add", (req, res, next) => {
     if (!oldUser) {
       if (Object.keys(check_in_fields).length === 4) {
         const dates = [today()];
-        const newUser = new User({ fname, lname, email, empl, dates });
+        const newUser = new User({ ...check_in_fields, dates });
         newUser
           .save()
           .then(() => res.status(200).json("User added!"))
