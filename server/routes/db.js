@@ -10,46 +10,40 @@ router.get("/get", (req, res, next) => {
     .catch(err => res.status(400).json("Error: " + err));
 });
 
-router.post("/addNew", (req, res, next) => {
-  console.log(req.body);
-  const fname = req.body.fname;
-  const lname = req.body.lname;
-  const email = req.body.email;
-  const empl = req.body.empl;
-  const dates = [today()];
+const findRelevantFields = (stored, current) => {
+  if (req.body[current] !== "") {
+    return { ...stored, [current]: req.body[current] };
+  } else {
+    return stored;
+  }
+};
 
-  const newUser = new User({ fname, lname, email, empl, dates });
+router.post("/add", (req, res, next) => {
+  const check_in_fields = Object.keys(req.body).reduce(findRelevantFields, {});
 
-  newUser
-    .save()
-    .then(() => res.json("User added!"))
-    .catch(err => res.status(400).json("Error: " + err));
-});
-
-router.post("/addOld", (req, res, next) => {
-  console.log(req.body);
-  // const fname = req.body.fname;
-  // const lname = req.body.lname;
-  // const email = req.body.email;
-  const empl = req.body.empl;
-  // const dates = [today()];
-
-  // const newUser = new User({ fname, lname, email, empl, dates });
-
-  User.findOne({ empl: empl }, (err, oldUser) => {
+  User.findOne(check_in_fields, (err, oldUser) => {
     if (err) {
       return next(err);
     }
 
     if (!oldUser) {
-      return res.send();
+      if (Object.keys(check_in_fields).length === 4) {
+        const dates = [today()];
+        const newUser = new User({ fname, lname, email, empl, dates });
+        newUser
+          .save()
+          .then(() => res.status(200).json("User added!"))
+          .catch(err => res.status(400).json("Error: " + err));
+      } else {
+        return res.send();
+      }
     }
 
     oldUser.dates.push(today());
 
     oldUser
       .save()
-      .then(() => res.json("User added!"))
+      .then(() => res.status(200).json("User added!"))
       .catch(err => res.status(400).json("Error: " + err));
 
     return res.send();
