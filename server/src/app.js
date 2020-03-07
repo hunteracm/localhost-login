@@ -1,5 +1,5 @@
 // module dependencies
-const compression = require("compression");
+import compression from "compression";
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const express = require("express");
