@@ -1,11 +1,12 @@
 // module dependencies
-const compression = require("compression");
+import compression from "compression";
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const express = require("express");
 const logger = require("morgan");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // env variables
 const dotenv = require("dotenv");
