@@ -6,6 +6,7 @@ const express = require("express");
 const logger = require("morgan");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // env variables
 const dotenv = require("dotenv");
