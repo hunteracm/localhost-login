@@ -1,17 +1,24 @@
 .content {
-  height: 95vh;
+  min-height: 95vh;
+  height: fit-content;
   text-align: center;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   background-color: rgb(218, 218, 218);
+  width: 100%;
+  margin: 0;
+  /* max-width: 90%; */
 }
 
 .checkInWrapper {
   background-color: rgb(247, 247, 247);
   border: none;
   border-radius: 0.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  padding: 0.2rem;
 }
 
 .name,
@@ -51,4 +58,18 @@
   background-color: rgb(98, 255, 98);
   border: none;
   text-decoration: none;
+}
+
+.error {
+  background-color: rgb(255, 128, 128);
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }

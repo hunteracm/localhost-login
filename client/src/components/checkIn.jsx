@@ -17,7 +17,7 @@ export default class CheckIn extends Component {
       errorMessages: [
         "Please enter only a name with letters",
         "Please enter a valid email",
-        "EMPLID is only Numeric"
+        "EMPLID is only numeric and has 8 integers"
       ],
       errorId: [
         0,
@@ -26,28 +26,42 @@ export default class CheckIn extends Component {
         0,
       ]
     };
-    this.update = this.update.bind(this);
-    this.submit = this.submit.bind(this);
   }
 
   onComponentDidMount() {
     document.title = "Hunter ACM - Check In";
   }
 
-  update(e) {
-    if (e.target.name == "") {
-    } else if (e.target.name == "emplid") {
-      let re = /^[0-9]{0,9}$/;
-      if (re.test(e.target.value)) {
+  update = (e) => {
+    if (e.target.name === "email") {
+      let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(re.test(e.target.value)){
         let ps = this.state.errorId;
         ps[1] = 0;
+        this.setState({
+          email: e.target.value,
+          errorId: ps,
+        });
+      } else {
+        let ps = this.state.errorId;
+        ps[1] = 1;
+        this.setState({
+          email: e.target.value,
+          errorId: ps,
+        });
+      }
+    } else if (e.target.name === "emplid") {
+      let re = /^[0-9]{0,8}$/;
+      if (re.test(e.target.value)) {
+        let ps = this.state.errorId;
+        ps[2] = 0;
         this.setState({
           emplid: e.target.value,
           errorId: ps,
         });
       } else {
         let ps = this.state.errorId;
-        ps[1] = 0;
+        ps[2] = 1;
         this.setState({
           errorId: ps,
         });
@@ -59,7 +73,7 @@ export default class CheckIn extends Component {
     }
   }
 
-  submit() {
+  submit = () => {
     this.setState({
       loading: true,
     });
@@ -88,7 +102,8 @@ export default class CheckIn extends Component {
       <div className="content">
         <div className="checkInWrapper">
           <div>
-            <div className="">Fill out to check in:</div>
+            <div className="title">Check In to our Meeting!</div>
+            <div className="description">Fill out to check in:</div>
             <input
               name="first_name"
               type="text"
@@ -114,7 +129,8 @@ export default class CheckIn extends Component {
               placeholder="email@myhunter.cuny.edu"
               onChange={this.update}
               className="email"
-            />
+              />
+              {this.state.errorId[1] ? <div className="error">{this.state.errorMessages[1]}</div> : null}
           </div>
           <div>
             <input
@@ -126,6 +142,7 @@ export default class CheckIn extends Component {
               className="emplid"
             />
           </div>
+          {this.state.errorId[2] ? <div className="error">{this.state.errorMessages[2]}</div> : null}
           <div>
             <button onClick={this.submit} className="btn">
               Check In

@@ -1,16 +1,23 @@
 .navBar {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  height: 2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-right: 0.4rem;
+  padding-left: 0.2rem;
+  height: fit-content;
+  /* height: 2rem; */
   font-size: 1.1rem;
   /* display: flex;
   flex-flow: row; */
+  background-color: black;
+  margin: 0;
 }
 
 .navElement {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
-  color: black;
+  margin-top: 0.8rem;
+  /* color: black; */
+  color: white;
   text-decoration: none;
   float: right;
 }
@@ -22,5 +29,48 @@
 
 .navElement:visited {
   text-decoration: none;
-  color: black;
+  color: white;
+  /* color: black; */
+}
+
+.footer {
+  background-color: rgb(60, 0, 60);
+  color: rgb(255, 224, 100);
+  padding: 0.4rem;
+  /* padding-bottom: 0.5rem; */
+  text-align: center;
+}
+
+.footerLink {
+  color: white;
+  text-decoration: none;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.footerLink:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footerLink:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  /* width: 100%; */
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  background-color: black;
 }

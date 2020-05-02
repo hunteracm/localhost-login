@@ -1,0 +1,79 @@
+{
+  "dates": [
+    {
+      "name": "First Meeting",
+      "date": "2/6/2020",
+      "description": "Welcome to the Spring Semester at Hunter ACM!"
+    },
+    {
+      "name": "Second Meeting",
+      "date": "2/13/2020",
+      "description": "Today we will try to make this website live!"
+    },
+    {
+      "name": "Third Meeting",
+      "date": "2/20/2020",
+      "description": "Today is the second session of remaking the Hunter ACM website! We'll be working on the backend this time, withe expertise of Khinshan, simultaneously showing fulstack code. Come and ask questions!"
+    },
+    {
+      "name": "Fourth Meeting",
+      "date": "2/27/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Fifth Meeting",
+      "date": "3/5/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Sixth Meeting",
+      "date": "3/12/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Seventh Meeting",
+      "date": "3/19/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Eighth Meeting",
+      "date": "3/26/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Ninth Meeting",
+      "date": "4/2/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "No Meeting!",
+      "date": "4/9/2020",
+      "description": "There will be no meeting this day, happy spring recess!"
+    },
+    {
+      "name": "No Meeting!",
+      "date": "4/16/2020",
+      "description": "There will be no meeting this day, happy spring recess!"
+    },
+    {
+      "name": "Tenth Meeting",
+      "date": "4/23/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Eleventh Meeting",
+      "date": "4/30/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Twelth Meeting",
+      "date": "5/7/2020",
+      "description": "Not determined yet."
+    },
+    {
+      "name": "Thirteenth Meeting",
+      "date": "5/14/2020",
+      "description": "This will be the last meeting of this Semester! Farewell!"
+    }
+  ]
+}
